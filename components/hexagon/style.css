@@ -1,0 +1,39 @@
+.hexagon-container {
+  /* width: 950px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.hexarea {
+  display: flex;
+}
+
+img {
+  width: 250px;
+  height: 100%;
+}
+/*/ LETS MAKE A HEXAGON SHAPE /*/
+.hexagon {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  background: deeppink;
+  width: 200px;
+  height: 250px;
+  margin: 0 8px;
+  clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+  transition: 0.9s;
+}
+
+.first {
+  transform: translateY(50px);
+}
+
+.last {
+  transform: translateY(-50px);
+}

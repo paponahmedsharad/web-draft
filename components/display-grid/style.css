@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color-scheme: dark !important;
+  background: #fff !important;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  min-width: 100%;
+}
+
+/*============styling my section================ */
+section:nth-child(1) {
+  color: #000;
+  background: #6680cc;
+  grid-area: one;
+}
+section:nth-child(2) {
+  color: #000000;
+  background: #e6e600;
+  grid-area: two;
+}
+section:nth-of-type(3) {
+  color: white;
+  background: green;
+  grid-area: three;
+}
+
+section:nth-child(4) {
+  color: black;
+  background: #e6ccb3;
+  grid-area: four;
+}
+section:nth-child(5) {
+  color: #004d00;
+  background: #66e633;
+  grid-area: five;
+}
+
+section > * {
+  padding: 10px;
+}
+
+section > h1 {
+  opacity: 0.7;
+  font-size: 2rem;
+}
+
+.test-grid > * {
+  box-shadow: 0 4px 12px 0 #0b123577;
+}
+/* ============== appling grid =============== */
+.test-grid {
+  min-height: 500px;
+  color: #999999;
+  padding: 20px;
+  gap: 1rem;
+  /* grid-template-columns: repeat(4, 1fr); */
+  display: grid;
+  grid-template-areas: "one" "two" "three" "four" "five";
+}
+
+/* =========== adding responsiveness ========= */
+@media (min-width: 40rem) {
+  .test-grid {
+    grid-template-areas:
+      "one one two five"
+      "three four four five";
+  }
+}
